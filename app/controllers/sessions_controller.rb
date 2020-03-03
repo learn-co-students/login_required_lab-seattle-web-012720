@@ -18,6 +18,7 @@ class SessionsController < ApplicationController
         if session.include? :name
             session.delete :name
         end
+        redirect_to '/login'
     end
 
 
