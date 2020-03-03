@@ -1,3 +1,4 @@
+require 'byebug'
 class SessionsController < ApplicationController
 
     def new
@@ -14,11 +15,9 @@ class SessionsController < ApplicationController
     end
 
     def destroy
-        name = params[:name]
         if session[:name]
-            session.delete :name 
+            session.delete :name
         end
-        session[:name]
     end
 end
   
